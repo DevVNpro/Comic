@@ -16,11 +16,11 @@ public class HomePanel : MonoBehaviour
     }
     public void OpenSelectLevel()
     {
-        RxManager.OpenLevelPanel.OnNext(delegate { });
+        RxManager.ClickLevelPanel.OnNext(delegate { });
     }
     public void OpenSettingPanel()
     {
-        RxManager.OpenSetting.OnNext(delegate { });
+        RxManager.ClickSetting.OnNext(delegate { });
     }
 
 }

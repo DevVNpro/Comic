@@ -13,6 +13,6 @@ public class LevelPanel : MonoBehaviour
     }
     private void BackMain()
     {
-        RxManager.OpenMain.OnNext(delegate { });
+        RxManager.ClickMain.OnNext(delegate { });
     }
 }

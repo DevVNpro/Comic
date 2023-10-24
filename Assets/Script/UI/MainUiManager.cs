@@ -13,17 +13,17 @@ public class MainUiManager : MonoBehaviour
     public List<GameObject> popup;
     void Start()
     {
-        RxManager.OpenMain.Subscribe(delegate (Action action)
+        RxManager.ClickMain.Subscribe(delegate (Action action)
         {
             CloseAllPanel();
             ActiveHomePanel();
         }).AddTo(this);
-        RxManager.OpenLevelPanel.Subscribe(delegate (Action action)
+        RxManager.ClickLevelPanel.Subscribe(delegate (Action action)
         {
             CloseAllPanel();
             ActiveLevelPanel(); 
         }).AddTo(this);
-        RxManager.OpenSetting.Subscribe( _ =>
+        RxManager.ClickSetting.Subscribe( _ =>
         {
             CloseAllPanel();
             AtiveSettingPanel();
