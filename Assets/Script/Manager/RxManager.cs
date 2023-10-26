@@ -12,6 +12,7 @@ public abstract class RxManager : MonoBehaviour
     public static readonly Subject<Action> ClickSetting = new Subject<Action>();
     #endregion
     #region gameplay
+    public static readonly Subject<int> LoadMap = new Subject<int>();
     public static readonly Subject<Action> ButtonWin = new Subject<Action>();
     public static readonly Subject<Action> ButtonLosse = new Subject<Action>();
     #endregion

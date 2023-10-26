@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public  static class Confix 
+public  static class ConfigData 
 {
     #region Sound 
     private const string keyMusic = "Key_Music";
@@ -40,6 +40,8 @@ public  static class Confix
 
 
     #region GamePlay
+    public static int LevelStart = 1;
+    public static int LevelMax =30;
     private static string KeyFistOpenGame = "Key_Fist_Open";
     private static string KeyTimeDeadInLevel = "Key_Dead_In_Level";
     public static string KeyCurrentLevelPlay = "Key_Current_Level";
@@ -66,7 +68,7 @@ public  static class Confix
     }
     public static int GetCurrentLevelPlay()
     {
-        return PlayerPrefs.GetInt(KeyCurrentLevelPlay, 0);
+        return PlayerPrefs.GetInt(KeyCurrentLevelPlay, 10);
     }
     public static void SetKeyCurrentPlay(int level)
     {
